@@ -11,3 +11,8 @@ Component::Component(Actor* owner, const char* name)
 	m_owner = owner;
 	m_name = name;
 }
+
+Component::~Component()
+{
+	delete[] m_name;
+}
